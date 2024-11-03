@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de Aulas</title>
+    <!-- Estilos CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            max-width: 600px;
+            background-color: #f9f9f9;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        label {
+            display: block;
+            margin: 15px 0 5px;
+            font-weight: bold;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            margin-right: 5px;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .aluno {
+            background-color: white;
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+        }
+        .aluno p {
+            margin: 5px 0;
+        }
+        .btn-group {
+            margin-top: 10px;
+        }
+        .btn-group button {
+            background-color: #007bff;
+        }
+        .btn-group button:hover {
+            background-color: #0069d9;
+        }
+        .btn-danger {
+            background-color: #dc3545;
+        }
+        .btn-danger:hover {
+            background-color: #c82333;
+        }
+        #resetButton {
+            background-color: #ffc107;
+        }
+        #resetButton:hover {
+            background-color: #e0a800;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 10px 0 0;
+        }
+        li {
+            font-size: 0.9em;
+            color: #555;
+            margin: 3px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Gerenciador de Aulas</h1>
+    <label for="nome">Nome do Aluno:</label>
+    <input type="text" id="nome" placeholder="Digite o nome do aluno">
+    <button onclick="cadastrarAluno()">Cadastrar Aluno</button>
+
+    <h2>Alunos</h2>
+    <div id="alunos"></div>
+
+    <h3>Totais</h3>
+    <p>Total acumulado: R$ <span id="totalAcumulado">0</span></p>
+    <button id="resetButton" onclick="resetarContagem()">Zerar Contagem</button>
+
+    <!-- Importa o arquivo JavaScript -->
+    <script src="app.js"></script>
+</body>
+</html>
